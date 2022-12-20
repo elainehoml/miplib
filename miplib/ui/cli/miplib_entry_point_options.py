@@ -13,7 +13,7 @@ import miplib.ui.cli.argparse_helpers as helpers
 from miplib.ui.cli.deconvolution_options import get_deconvolution_options_group
 from miplib.ui.cli.frc_options import get_frc_options_group
 from miplib.ui.cli.fusion_options import get_fusion_options_group
-from miplib.ui.cli.psf_estimation_options import get_psf_estimation_options_group
+# from miplib.ui.cli.psf_estimation_options import get_psf_estimation_options_group
 from miplib.ui.cli.registration_options import get_registration_options_group
 from miplib.ui.cli.ism_options import get_ism_reconstruction_options_group
 

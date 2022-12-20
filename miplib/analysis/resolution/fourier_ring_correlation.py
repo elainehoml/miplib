@@ -14,7 +14,7 @@ from miplib.data.containers.fourier_correlation_data import FourierCorrelationDa
 from miplib.data.containers.image import Image
 from . import analysis as fsc_analysis
 from miplib.processing import windowing
-import miplib.data.io.read as imread
+# import miplib.data.io.read as imread
 
 def calculate_single_image_frc(image, args, average=True, trim=True, z_correction=1):
     """
