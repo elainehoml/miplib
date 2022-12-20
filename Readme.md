@@ -1,5 +1,7 @@
-# MIPLIB
+# MIPLIB (mini version to only run FRC)
 [![DOI](https://zenodo.org/badge/162555135.svg)](https://zenodo.org/badge/latestdoi/162555135)
+
+***NOTE: this is a minimal version of miplib to make the FRC calculations part work without installing extra dependencies which were affecting [Quoll](https://github.com/rosalindfranklininstitute/quoll).***
 
 Microscope Image Processing Library (*MIPLIB*) is a Python based software library, created especially for processing and analysis of fluorescece microscopy images. It contains functions for example for:
 
