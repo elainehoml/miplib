@@ -1,12 +1,28 @@
 from setuptools import setup, find_packages, Extension
-import numpy
+# import numpy
 
 setup(
     name='miplib',
     version='1.0.5',
     packages=find_packages(),
-    install_requires=['numpy', 'scipy', 'h5py', 'SimpleITK', 'jpype1',
-                      'matplotlib', 'pandas', 'pims', 'scikit-image', 'psf'],
+    # install_requires=['numpy', 'scipy', 'h5py', 'SimpleITK', 'jpype1',
+    #                   'matplotlib', 'pandas', 'pims', 'scikit-image', 'psf'],
+    install_requires=[
+        'numpy',
+        'scipy',
+        'pandas',
+    ],
+    extras_require={
+        'fullmiplib': [
+            'h5py',
+            'SimpleITK',
+            'jpype1',
+            'matplotlib',
+            'pims',
+            'scikit-image',
+            'psf',
+        ]
+    },
     description='A Python software library for (optical) microscopy image restoration, reconstruction and analysis.',
     entry_points={
         'console_scripts': [
@@ -26,16 +42,16 @@ setup(
     license='BSD',
     author='Sami Koho',
     author_email='sami.koho@gmail.com',
-    ext_modules=[
-        Extension(
-            'miplib.processing.ops_ext',
-            ['miplib/processing/src/ops_ext.c'],
-            include_dirs=[numpy.get_include()]),
-        Extension(
-            'miplib.data.io._tifffile',
-            ['miplib/data/io/src/tifffile.c'],
-            include_dirs=[numpy.get_include()])
-    ],
+    # ext_modules=[
+    #     Extension(
+    #         'miplib.processing.ops_ext',
+    #         ['miplib/processing/src/ops_ext.c'],
+    #         include_dirs=[numpy.get_include()]),
+    #     Extension(
+    #         'miplib.data.io._tifffile',
+    #         ['miplib/data/io/src/tifffile.c'],
+    #         include_dirs=[numpy.get_include()])
+    # ],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
